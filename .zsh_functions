@@ -1,0 +1,36 @@
+# Cheat.sh
+ch ()
+{
+    curl cht.sh/$1
+}
+
+lpasswd(){
+  for PARAM in "$@"; do
+    if [[ -z $PARAMS ]]; then
+      PARAMS="${PARAM}"
+    else
+      PARAMS="${PARAMS} ${PARAM}"
+    fi
+  done
+  lpass show --password "${PARAMS}"
+  unset PARAMS
+}
+
+# Git fzf
+fbr() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+check_cors() {
+  curl -H "Origin: $1" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -X OPTIONS --verbose $2
+}
+
+reload_gtk_theme() {
+  theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
+  gsettings set org.gnome.desktop.interface gtk-theme ''
+  sleep 1
+  gsettings set org.gnome.desktop.interface gtk-theme $theme
+}

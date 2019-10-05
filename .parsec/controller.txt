@@ -1,0 +1,3 @@
+# Additional controller mappings can be placed in this file.
+# Examples can be seen at https://raw.githubusercontent.com/gabomdq/SDL_GameControllerDB/master/gamecontrollerdb.txt
+# This tool can be used to create new controller mappings: http://www.generalarcade.com/gamepadtool/

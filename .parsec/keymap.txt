@@ -1,0 +1,11 @@
+{
+	"disconnect":	["AltLeft", "F4"],
+	"disconnect2":	["ControlLeft", "AltLeft", "Backquote"],
+	"remap":	["ControlLeft", "AltLeft", "KeyM"],
+	"immersive":	["ControlLeft", "AltLeft", "KeyI"],
+	"windowed":	["ControlLeft", "ShiftLeft", "KeyW"],
+	"chat":	["ControlLeft", "ShiftLeft", "KeyC"],
+	"menu":	["ControlLeft", "ShiftLeft", "KeyM"],
+	"accept":	["ControlLeft", "F1"],
+	"kickall":	["ControlLeft", "F3"]
+}

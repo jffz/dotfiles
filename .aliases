@@ -1,0 +1,20 @@
+alias rake="bundle exec rake"
+alias clr="clear"
+alias xs="cd"
+alias k="kubectl"
+alias kc="kubectl --context"
+alias marcel='docker run --net host -it -u $(id -u) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v ~/.ssh:/home/$(whoami)/.ssh --rm'
+alias genlist="python3 ~/bin/genlist.py"
+alias gist="/usr/bin/gist-paste"
+alias git='LANG=en_GB git'
+alias gerp='grep'
+alias grpe='grep'
+alias taks='task'
+alias sapi='sudo apt install'
+alias genpass='date +%s | sha256sum | base64 | head -c 32 ; echo' 
+alias tf="terraform"
+alias bfg="java -jar bfg.jar"
+alias adoc="ansible-doc"
+alias gitshowadd="git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/'"
+alias gitshowdel="git diff --color=always|perl -wlne 'print $1 if /^\e\[31m-(.*)\e\[m$/'"
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

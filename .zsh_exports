@@ -1,0 +1,21 @@
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH="/home/geo/.oh-my-zsh"
+# export UPDATE_ZSH_DAYS=13
+# export MANPATH="/usr/local/man:$MANPATH"
+# export LANG=en_US.UTF-8
+#   export EDITOR='vim'
+#   export EDITOR='mvim'
+# export ARCHFLAGS="-arch x86_64"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export COLLINS_CONFIG=~/.collins.yml
+export BAT_THEME="TwoDark"
+[ -d ~/bin ] && export PATH="/home/geo/bin:${PATH}"
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# Go
+export PATH=$PATH:/home/geo/.go/bin
+export GOPATH=/home/geo/go
+export GOROOT=/home/geo/.go
+
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH

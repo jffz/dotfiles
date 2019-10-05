@@ -1,0 +1,30 @@
+[global_config]
+  title_font = FuraCode Nerd Font 9
+  title_inactive_bg_color = "#575d5e"
+  title_transmit_bg_color = "#ed6b21"
+  title_transmit_fg_color = "#2e3233"
+  title_use_system_font = False
+[keybindings]
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  go_up = <Alt>k
+  hide_window = F12
+  layout_launcher = <Primary><Shift><Alt>l
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.93
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = FuraCode Nerd Font Mono 9
+    scrollback_infinite = True
+    use_system_font = False
