@@ -52,6 +52,7 @@ end
 beautiful.init("/home/geo/.config/awesome/theme.lua")
 beautiful.useless_gap = 5
 beautiful.border_focus = "#f0620a"
+beautiful.wallpaper = "/home/geo/Images/wallpapers/futuristic_city.png"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -654,3 +655,10 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+--
+-- -- Enable Rounded corners
+client.connect_signal("manage", function (c)
+    c.shape = function(cr,w,h)
+        gears.shape.rounded_rect(cr,w,h,5)
+    end
+end)
