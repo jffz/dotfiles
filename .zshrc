@@ -194,4 +194,4 @@ compinit
 #[ -f $DIRCOLORS ] && eval $(dircolors $DIRCOLORS)
 
 # Vivid colors
-export LS_COLORS="$(vivid generate carbon-fromayu)"
+export LS_COLORS="$(vivid generate carbon)"
