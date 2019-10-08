@@ -1,0 +1,2 @@
+#!/bin/bash
+[[ "$VIRTUAL_ENV" != "" ]] && echo "🐍 $(python --version | awk {'print $2'})"
