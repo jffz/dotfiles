@@ -28,3 +28,6 @@ nnoremap <Leader>m   <C-W>_<C-W>|
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'ayu_dark'

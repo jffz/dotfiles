@@ -17,7 +17,7 @@
 }
 
 .terminator-terminal-window notebook tab:checked label {
-    color: #ed6b21;
+    /*color: #ed6b21;*/
     font-weight: 500;
 }
 

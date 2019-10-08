@@ -34,3 +34,7 @@ reload_gtk_theme() {
   sleep 1
   gsettings set org.gnome.desktop.interface gtk-theme $theme
 }
+
+show_colour() {
+    perl -e 'foreach $a(@ARGV){print "\e[48;2;".join(";",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
+}

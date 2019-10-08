@@ -1,5 +1,5 @@
 [global_config]
-  title_font = FuraCode Nerd Font 9
+  title_font = Source Code Pro for Powerline Light 10
   title_inactive_bg_color = "#575d5e"
   title_transmit_bg_color = "#ed6b21"
   title_transmit_fg_color = "#2e3233"
@@ -22,9 +22,10 @@
 [plugins]
 [profiles]
   [[default]]
-    background_darkness = 0.87
+    background_darkness = 0.89
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = FuraCode Nerd Font Mono 9
+    font = Source Code Pro for Powerline 10
+    foreground_color = "#e3d9c6"
     scrollback_infinite = True
     use_system_font = False
