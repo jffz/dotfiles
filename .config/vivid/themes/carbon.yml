@@ -1,0 +1,95 @@
+colors:
+  # Based on original "ayu" theme:
+  # https://github.com/ayu-theme/ayu-colors
+  background_color: 'fafafa'
+  black: '000'
+  orange: 'ed6b21'
+  mid_blue: '1d5a5d'
+  sienna: '54d2cc'
+  white: 'e3d9c6'
+  blue: '3c5a6e'
+  pink: 'f07171'
+  lime: '86b300'
+  grey: '575d5e'
+
+  light_green: '9ae845'
+  light_blue: '54d2cc'
+
+  gray: '666666'
+  lightgray: 'aaa'
+
+core:
+  regular_file: {}
+
+  directory:
+    foreground: orange
+
+  executable_file:
+    foreground: blue
+    font-style: bold
+
+  symlink:
+    foreground: pink
+
+  broken_symlink:
+    foreground: black
+    background: sienna
+    # font-style: blink
+
+  fifo:
+    foreground: black
+    background: blue
+
+  socket:
+    foreground: black
+    background: pink
+
+  normal_text:
+    {}
+
+text:
+  special:
+    foreground: black
+    background: orange
+
+  todo:
+    font-style: bold
+
+  licenses:
+    foreground: gray
+
+  configuration:
+    foreground: white
+
+  other:
+    foreground: grey
+
+markup:
+  foreground: grey
+
+programming:
+  source:
+    foreground: light_blue
+
+  tooling:
+    foreground: light_green
+
+    continuous-integration:
+      foreground: light_blue
+
+media:
+  foreground: pink
+
+office:
+  foreground: sienna
+
+archives:
+  foreground: lime
+  font-style: underline
+
+executable:
+  foreground: sienna
+  font-style: bold
+
+unimportant:
+  foreground: lightgray
