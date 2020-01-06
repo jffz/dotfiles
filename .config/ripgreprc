@@ -1,2 +1,9 @@
---max-columns=150
+# Grep hidden files
 --hidden
+
+# Ignore case
+-i
+
+# Ignore patterns
+--glob
+!.git/*
