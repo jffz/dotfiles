@@ -1,3 +1,7 @@
+# Instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -29,6 +33,8 @@ POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 POWERLEVEL9K_CUSTOM_TERRAFORM_WORKSPACE='bash -c "if ls *.tf > /dev/null 2>/dev/null; then if which terraform > /dev/null 2>/dev/null; then terraform workspace show; fi; fi"'
 POWERLEVEL9K_CUSTOM_PIPENV_WORKSPACE='bash -c /home/geo/.local/bin/pyversion_venv'
 #POWERLEVEL9K_CUSTOM_PIPENV_WORKSPACE='bash -c "if [[ "$VIRTUAL_ENV" != "" ]];then echo "🐍 $(python --version | awk {'print $2'})"; fi"'
+POWERLEVEL9K_CUSTOM_PIPENV_WORKSPACE_BACKGROUND='#e3d9c6'
+POWERLEVEL9K_CUSTOM_PIPENV_WORKSPACE_FOREGROUND='#047823'
 POWERLEVEL9K_CUSTOM_TERRAFORM_WORKSPACE_BACKGROUND="055"
 POWERLEVEL9K_CUSTOM_TERRAFORM_WORKSPACE_FOREGROUND="white"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs custom_terraform_workspace custom_pipenv_workspace)
@@ -39,9 +45,7 @@ POWERLEVEL9K_TIME_FOREGROUND='#e3d9c6'
 POWERLEVEL9K_TIME_BACKGROUND='#3c5a6e'
 POWERLEVEL9K_KUBECONTEXT_FOREGROUND='#3c5e6e'
 POWERLEVEL9K_KUBECONTEXT_BACKGROUND='#e3d9c6'
-#POWERLEVEL9K_USER_DEFAULT_FOREGROUND='208'
 POWERLEVEL9K_USER_DEFAULT_FOREGROUND='#ed6b21'
-#POWERLEVEL9K_USER_DEFAULT_BACKGROUND='237'
 POWERLEVEL9K_USER_DEFAULT_BACKGROUND='#293031'
 POWERLEVEL9K_DIR_HOME_BACKGROUND='#293031'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='#293031'
@@ -51,7 +55,6 @@ POWERLEVEL9K_DIR_HOME_FOREGROUND='#ed6b21'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='#ed6b21'
 POWERLEVEL9K_DIR_ETC_FOREGROUND='#ed6b21'
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='#ed6b21'
-#POWERLEVEL9K_USER_DEFAULT_FOREGROUND='orangered1'
 # `vcs` color customization
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#293031'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='#e3d9c6'
@@ -122,6 +125,7 @@ plugins=(
   history-substring-search
   kubectl
   pip
+  taskwarrior
   z
 )
 
@@ -195,3 +199,20 @@ compinit
 
 # Vivid colors
 export LS_COLORS="$(vivid generate carbon)"
+
+# Pager
+export PAGER="cat"
+
+# AWS autocomplete
+if [ -f "/usr/local/bin/aws_completer" ]; then
+  complete -C '/usr/local/bin/aws_completer' aws
+fi
+
+export RIPGREP_CONFIG_PATH="/home/geo/.config/ripgreprc"
+
+# bash-my-aws
+export PATH="$PATH:$HOME/.bash-my-aws/bin"
+source ~/.bash-my-aws/aliases
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+source ~/.bash-my-aws/bash_completion.sh

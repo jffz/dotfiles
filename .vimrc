@@ -8,6 +8,7 @@ set nu
   \ hlsearch
   \ scrolloff=3
   \ shiftwidth=2
+  \ colorcolumn=81
 colorscheme molokai
 hi Normal guibg=NONE ctermbg=NONE
 noremap <Up> <NOP>
@@ -23,6 +24,9 @@ nnoremap <Leader>k   <C-W><Up>
 nnoremap <Leader>j   <C-W><Down>
 nnoremap <Leader>w   <C-W>
 nnoremap <Leader>m   <C-W>_<C-W>|
+nnoremap <Leader>n   :NERDTreeToggle<CR>
+nnoremap <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 "" vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -30,4 +34,5 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 " vim-airline
 let g:airline_powerline_fonts = 1
+"let g:airline_theme = 'gruvbox'
 let g:airline_theme = 'ayu_dark'

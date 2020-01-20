@@ -5,6 +5,7 @@ ch ()
 }
 
 lpasswd(){
+  # https://github.com/lastpass/lastpass-cli/issues/59
   for PARAM in "$@"; do
     if [[ -z $PARAMS ]]; then
       PARAMS="${PARAM}"
@@ -12,7 +13,7 @@ lpasswd(){
       PARAMS="${PARAMS} ${PARAM}"
     fi
   done
-  lpass show --password "${PARAMS}"
+  lpass show --password "${PARAMS}" | xclip -in -l 1
   unset PARAMS
 }
 

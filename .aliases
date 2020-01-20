@@ -19,3 +19,4 @@ alias gitshowadd="git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\
 alias gitshowdel="git diff --color=always|perl -wlne 'print $1 if /^\e\[31m-(.*)\e\[m$/'"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias icat="kitty +kitten icat"
+alias systemclt="systemctl"
